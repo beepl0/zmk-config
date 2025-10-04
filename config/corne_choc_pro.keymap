@@ -79,13 +79,13 @@
             >;
         };
 
-        extra_layer_2 {
-            display-name = "EXTRA 2";
+        movement {
+            display-name = "move";
             bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
+  &trans     &trans    &trans    &trans     &trans  &trans  &trans  &kp K_AGAIN   &kp K_PASTE  &kp K_COPY     &kp K_CUT    &kp K_UNDO
+  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans  &trans  &trans  &kp CAPSLOCK  &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT
+  &trans     &trans    &trans    &trans     &trans                  &kp INSERT    &kp HOME     &kp PAGE_DOWN  &kp PAGE_UP  &kp END
+                       &trans    &trans     &trans                  &trans        &trans       &trans
             >;
         };
 
