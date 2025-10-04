@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     chosen { zmk,physical-layout = &five_col_layout; };
@@ -72,10 +73,10 @@
         fnkbdctl {
             display-name = "fn|kbctl";
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12
-  &kp LCTRL     &kp LALT      &kp LGUI      &kp LSHFT     &trans          &trans  &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
-  &trans        &trans        &sys_reset    &bootloader   &studio_unlock                  &trans  &kp F1  &kp F2   &kp F3   &kp F4
-                              &trans        &trans        &trans                          &trans  &trans  &trans
+  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12
+  &kp LCTRL     &kp LALT         &kp LGUI      &kp LSHFT     &trans          &trans  &trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8
+  &trans        &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                  &trans  &kp F1  &kp F2   &kp F3   &kp F4
+                                 &trans        &trans        &trans                          &trans  &trans  &trans
             >;
         };
 
@@ -89,8 +90,8 @@
             >;
         };
 
-        extra_layer_3 {
-            display-name = "EXTRA 3";
+        none {
+            display-name = "none";
             bindings = <
   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -99,13 +100,13 @@
             >;
         };
 
-        extra_layer_4 {
-            display-name = "EXTRA 4";
+        media {
+            display-name = "media";
             bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans             &trans           &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp K_PREVIOUS  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_NEXT
+  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &kp K_MUTE         &trans           &trans
+                  &trans  &trans  &trans                  &trans  &trans          &trans
             >;
         };
 
